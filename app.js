@@ -4,6 +4,8 @@
   const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
   const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const price = "$" + S.drop.price;
+  // A design with colour options is shown in one colour at a time: v = design with that colour's img/glow
+  const variant = (d, ci) => (d.colors ? { ...d, img: d.colors[ci].img, glow: d.colors[ci].glow || d.glow, color: d.colors[ci].name } : d);
   const img = (d, view) => `img/${d.img}-${view}.${view === "front" || view === "back" ? "webp" : "jpg"}`;
 
   // Text that comes from config
@@ -85,10 +87,22 @@
         <div>
           <h3 class="card__name">${d.name}</h3>
           <p class="card__kicker">${d.kicker}</p>
+          ${d.colors ? `<div class="swatches">${d.colors.map((c, j) => `<span class="swatch" data-ci="${j}" title="${c.name}" aria-label="${c.name}" aria-pressed="${j === 0}" style="--sw:${c.swatch}"></span>`).join("")}<span class="swatches__name">${d.colors[0].name}</span></div>` : ""}
         </div>
         <div class="card__price"><b>${price}</b><small>pre-order</small><br><span class="card__cta">Reserve</span></div>
       </div>`;
-    card.addEventListener("click", () => openProduct(i));
+    card._ci = 0;
+    $$(".swatch", card).forEach((sw) => sw.addEventListener("click", (e) => {
+      e.stopPropagation(); // pick a colour on the card without opening it
+      const ci = +sw.dataset.ci, v = variant(d, ci);
+      card._ci = ci;
+      $$(".swatch", card).forEach((x) => x.setAttribute("aria-pressed", String(x === sw)));
+      $(".swatches__name", card).textContent = v.color;
+      $(".card__front", card).src = img(v, "front");
+      $(".card__print", card).style.backgroundImage = `url('${img(v, "print")}')`;
+      card.style.setProperty("--glow", v.glow);
+    }));
+    card.addEventListener("click", () => openProduct(i, card._ci));
     grid.appendChild(card);
   });
 
@@ -128,12 +142,25 @@
     $$(".thumb", $("#pThumbs")).forEach((t) => t.setAttribute("aria-pressed", String(t.dataset.key === key)));
   }
 
-  function openProduct(i) {
-    const d = S.designs[i];
+  function openProduct(i, ci = 0) {
+    const base = S.designs[i];
+    const d = variant(base, ci);
     $("#pKicker").textContent = `${S.drop.label} · ${d.kicker}`;
     $("#pTitle").textContent = d.name;
     $("#pBlurb").textContent = d.blurb;
-    $("#fDesign").value = d.name;
+    $("#fDesign").value = d.color ? `${d.name} (${d.color})` : d.name;
+    const colors = $("#pColors");
+    colors.hidden = !base.colors;
+    colors.innerHTML = "";
+    (base.colors || []).forEach((c, j) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "pcolor";
+      b.setAttribute("aria-pressed", String(j === ci));
+      b.innerHTML = `<span class="swatch" style="--sw:${c.swatch}"></span>${c.name}`;
+      b.addEventListener("click", () => { if (j !== ci) openProduct(i, j); });
+      colors.appendChild(b);
+    });
     const thumbs = $("#pThumbs");
     thumbs.innerHTML = "";
     views.filter((v) => !(d.noBack && v.key === "back")).forEach((v) => {

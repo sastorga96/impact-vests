@@ -36,8 +36,13 @@ window.SITE = {
       img: "cheetah",
       name: "Cheetah",
       kicker: "Big cat, edge to edge",
-      blurb: "Classic big-cat rosettes in mustard yellow, wrapped around the whole vest from zipper to side seams. Quiet it is not.",
+      blurb: "Classic big-cat rosettes wrapped around the whole vest from zipper to side seams. Mustard yellow with a hot-pink lining, or white with caramel-centred rosettes. Quiet it is not.",
       glow: "#EAC224",
+      // Colour options: the first is the default. Each needs img/<img>-front.webp, -detail.jpg, -print.jpg (and -back.webp unless noBack)
+      colors: [
+        { name: "Mustard", img: "cheetah", swatch: "#EAC224" },
+        { name: "White", img: "cheetah-white", swatch: "#F2F0EB", glow: "#E8E2D6" },
+      ],
       noBack: true, // no back photo yet: hide the back view
     },
     {
