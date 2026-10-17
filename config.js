@@ -2,7 +2,7 @@
 // The logo artwork is in /brand (swap those SVG/PNG files if the name changes).
 window.SITE = {
   // Bump this whenever you replace a vest image (same filename) so browsers fetch the new one
-  imgVersion: 4,
+  imgVersion: 5,
 
   brand: {
     name: "Stinger",
@@ -101,6 +101,16 @@ window.SITE = {
       kicker: "Exploding shards on white",
       blurb: "A burst of teal, mint, pink, purple and sun-yellow shards blasting off the chest, with halftone rings, speed lines and a purple hull and yoke.",
       glow: "#3FD9A0",
+      noBack: true, // no back photo yet: hide the back view
+    },
+
+    {
+      id: "southbeach89",
+      img: "southbeach",
+      name: "South Beach '89",
+      kicker: "Miami pastel speed streaks",
+      blurb: "Bubblegum pink and sky blue speed streaks with black keylines tearing across bright white, shattering into shards over pastel palms. A hot-pink lining finishes it off.",
+      glow: "#F55BAA",
       noBack: true, // no back photo yet: hide the back view
     },
 
