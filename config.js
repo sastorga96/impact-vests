@@ -36,8 +36,8 @@ window.SITE = {
       img: "cheetah",
       name: "Cheetah",
       kicker: "Big cat, edge to edge",
-      blurb: "Tan leopard spots wrapped around the whole vest, zipper to side seams. Quiet it is not.",
-      glow: "#C89A6A",
+      blurb: "Neon yellow with black cheetah spots, wrapped around the whole vest from zipper to side seams. Quiet it is not.",
+      glow: "#EAC224",
     },
     {
       id: "usa96",
