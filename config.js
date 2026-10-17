@@ -2,7 +2,7 @@
 // The logo artwork is in /brand (swap those SVG/PNG files if the name changes).
 window.SITE = {
   // Bump this whenever you replace a vest image (same filename) so browsers fetch the new one
-  imgVersion: 2,
+  imgVersion: 3,
 
   brand: {
     name: "Stinger",
@@ -33,6 +33,7 @@ window.SITE = {
       kicker: "90s race livery",
       blurb: "Teal, purple and hot-pink slashes on bright white, a checkered hem and a big #97 race plate on the back. Looks fast parked at the dock.",
       glow: "#19B3A6",
+      noBack: true, // no back photo yet: hide the back view
     },
     {
       id: "cheetah",
