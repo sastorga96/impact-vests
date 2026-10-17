@@ -55,5 +55,13 @@ window.SITE = {
       blurb: "A striped sunset over a hot-pink horizon grid, teal neon palms and a glowing flamingo, all on midnight purple. Pastel suit not included.",
       glow: "#FF2E97",
     },
+    {
+      id: "memphis88",
+      img: "memphis",
+      name: "Memphis '88",
+      kicker: "80s sprinkle confetti",
+      blurb: "Black sprinkle confetti on bright white with big red, cobalt, yellow, teal, lime and hot-pink shapes, each one dropping a hard black shadow. Pure Saturday-morning 1988.",
+      glow: "#2547D0",
+    },
   ],
 };
