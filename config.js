@@ -52,6 +52,7 @@ window.SITE = {
       kicker: "Summer of '96 Americana",
       blurb: "A navy star field, waving red and white stripes and one USA hit on the left chest. Built for the Fourth and every weekend near it.",
       glow: "#3A5BD9",
+      noBack: true, // no back photo yet: hide the back view
     },
     {
       id: "oceandrive85",
