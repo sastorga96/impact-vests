@@ -99,6 +99,7 @@ def main():
     ap.add_argument('--logo-xy', type=float, nargs=2, default=(0.73, 0.37), help="logo centre as fraction of vest box (default wearer's left chest)")
     ap.add_argument('--logo-w', type=float, default=0.30, help='logo width as fraction of vest width')
     ap.add_argument('--logo-clear', action='store_true', help='remove small print shapes touching the logo')
+    ap.add_argument('--lining', default=None, help="recolour the inner lining: 'black' or a hex colour like '#ff1493' (default: keep the photo's red)")
     ap.add_argument('--base', default='f2401-front', choices=list(BASES), help='base photo')
     ap.add_argument('--out', default=None, help='output folder (default /mnt/project-files/images/<slug>-vest/photo-mockup)')
     args = ap.parse_args()
@@ -133,6 +134,16 @@ def main():
     res = im.astype(np.float32) * (1 - fs) + col * fs
     zb = cv2.GaussianBlur(M['zipper'].astype(np.float32), (0, 0), 1.5)[..., None]
     res = res * (1 - zb) + (L * 0.5)[..., None] * zb
+    if args.lining:
+        # lining mask comes from the blank photo, so red in the print is never touched
+        lw = cv2.GaussianBlur(M['lining'].astype(np.float32), (0, 0), 1.5)[..., None]
+        shade_l = (L / max(1.0, np.median(L[M['lining'] > 0])))[..., None]
+        if args.lining == 'black':
+            lin = np.full(3, 22.0) * shade_l * 1.15
+        else:
+            hx = args.lining.lstrip('#'); rgb = [int(hx[i:i + 2], 16) for i in (0, 2, 4)]
+            lin = np.array(rgb[::-1], np.float32) * shade_l
+        res = res * (1 - lw) + lin * lw
     res = np.clip(np.where(vest[..., None] > 0, res, 255), 0, 255).astype(np.uint8)
 
     # outputs: full photo, 2000x2000 listing on white, site cut-out webp (1100 wide), chest detail 1400x1400

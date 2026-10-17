@@ -21,6 +21,7 @@ The base photo is the supplier's (F2401, gray outside, red lining). It is NOT co
    - `python3 photomap.py --slug <slug> --tile <tile.png>`
    - Chest logo: add `--logo <logo.png> --logo-clear`. Optionally set `--logo-xy 0.73 0.37` and `--logo-w 0.30` (fractions of the vest box; the default is the wearer's left chest).
    - Non-repeating art: use `--panel <art.png>` instead of `--tile`.
+   - Recolour the inner lining with `--lining black` (or a hex colour).
    - Use `--tile-width` (default 0.5 of vest width), `--tile-offset X Y` (shift the repeat, in tiles) and `--out DIR` as needed.
 3. Look at `01-front-photo.png`. If a big motif sits under the zipper, or the logo lands on a busy area, change `--tile-offset` and run it again.
 4. Outputs (default `/mnt/project-files/images/<slug>-vest/photo-mockup/`):
@@ -31,5 +32,4 @@ The base photo is the supplier's (F2401, gray outside, red lining). It is NOT co
 
 ## Limits
 - Front only. Back views need a back photo of the same vest, added to base/ and to `BASES` in photomap.py.
-- The lining stays the supplier's red.
 - Never copy trademarked logos or lettering into a design; draw original art inspired by them.
