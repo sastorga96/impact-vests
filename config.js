@@ -68,6 +68,7 @@ window.SITE = {
       kicker: "80s sprinkle confetti",
       blurb: "Black sprinkle confetti on bright white with big red, cobalt, yellow, teal, lime and hot-pink shapes, each one dropping a hard black shadow. Pure Saturday-morning 1988.",
       glow: "#2547D0",
+      noBack: true, // no back photo yet: hide the back view
     },
 
     // Jet Set '94: four mid-90s jet ski liveries, shown together under one heading
