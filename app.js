@@ -3,7 +3,7 @@
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
   const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const price = "$" + S.drop.price;
+  const price = "$" + S.preorder.price;
   // A design with colour options is shown in one colour at a time: v = design with that colour's img/glow
   const variant = (d, ci) => (d.colors ? { ...d, img: d.colors[ci].img, glow: d.colors[ci].glow || d.glow, color: d.colors[ci].name } : d);
   const img = (d, view) => `img/${d.img}-${view}.${view === "front" || view === "back" ? "webp" : "jpg"}?v=${S.imgVersion || 1}`;
@@ -13,11 +13,10 @@
   fill("data-brand", S.brand.name);
   fill("data-tagline", S.brand.tagline);
   fill("data-price", price);
-  fill("data-unlock", S.drop.unlockAt);
-  fill("data-drop-label", S.drop.label);
-  fill("data-season", S.drop.season);
+  fill("data-unlock", S.preorder.unlockAt);
+  fill("data-season", S.preorder.season);
   fill("data-year", new Date().getFullYear());
-  document.title = `${S.brand.name} ${S.brand.tagline} · ${S.drop.label} Pre-Orders`;
+  document.title = `${S.brand.name} ${S.brand.tagline} · ${S.preorder.season} Pre-Orders`;
   if (S.brand.contactEmail) {
     $$("[data-contact]").forEach((a) => { a.href = "mailto:" + S.brand.contactEmail; a.hidden = false; });
   }
@@ -64,13 +63,6 @@
   // Product cards
   const grid = $("#grid");
   S.designs.forEach((d, i) => {
-    // Designs that share a collection get one heading above the first of them
-    if (d.collection && (i === 0 || S.designs[i - 1].collection !== d.collection)) {
-      const h = document.createElement("h3");
-      h.className = "grid__collection reveal";
-      h.textContent = d.collection;
-      grid.appendChild(h);
-    }
     const card = document.createElement("button");
     card.type = "button";
     card.className = d.noBack ? "card card--noback reveal" : "card reveal";
@@ -119,7 +111,7 @@
 
   // Size buttons
   const sizeRow = $("#sizeRow");
-  S.drop.sizes.forEach((s) => {
+  S.preorder.sizes.forEach((s) => {
     const l = document.createElement("label");
     l.className = "size";
     l.innerHTML = `<input type="radio" name="size" value="${s}" required><span>${s}</span>`;
@@ -145,7 +137,7 @@
   function openProduct(i, ci = 0) {
     const base = S.designs[i];
     const d = variant(base, ci);
-    $("#pKicker").textContent = `${S.drop.label} · ${d.kicker}`;
+    $("#pKicker").textContent = `${S.preorder.season} · ${d.kicker}`;
     $("#pTitle").textContent = d.name;
     $("#pBlurb").textContent = d.blurb;
     $("#fDesign").value = d.color ? `${d.name} (${d.color})` : d.name;
@@ -235,7 +227,7 @@
   });
   $("#listForm").addEventListener("submit", (e) => {
     e.preventDefault();
-    submit(e.target, $("#listMsg"), "You're in. Watch your inbox for the next drop.");
+    submit(e.target, $("#listMsg"), "You're in. We'll email you when new prints land.");
   });
 
   // Reveal on scroll

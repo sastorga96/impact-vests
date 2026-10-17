@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Impact Vests · Drop 01 Pre-Orders</title>
+  <title>Impact Vests · Pre-Orders</title>
   <meta name="description" content="Loud all-over-print wakesurf impact vests. Reserve one free; each print only gets made if enough riders want it.">
-  <meta property="og:title" content="Loud impact vests · Drop 01 pre-orders">
-  <meta property="og:description" content="Four wild prints. Reserve free, pay only if your print gets made.">
+  <meta property="og:title" content="Loud impact vests · Pre-orders">
+  <meta property="og:description" content="Wild prints. Reserve free, pay only if your print gets made.">
   <meta property="og:image" content="brand/og.png">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
@@ -18,19 +18,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=4">
-  <script src="config.js?v=3"></script>
+  <script src="config.js?v=4"></script>
 </head>
 <body>
-  <a class="skip" href="#drop">Skip to the vests</a>
+  <a class="skip" href="#vests">Skip to the vests</a>
 
   <header class="nav" id="top">
     <a class="nav__logo" href="#top" aria-label="Home"><img src="brand/logo-header.svg" alt="" width="139" height="48"></a>
     <nav class="nav__links" aria-label="Main">
-      <a href="#drop">Drop 01</a>
+      <a href="#vests">Vests</a>
       <a href="#how">How it works</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn btn--blue btn--sm" href="#drop">Reserve</a>
+    <a class="btn btn--blue btn--sm" href="#vests">Reserve</a>
   </header>
 
   <main>
@@ -39,11 +39,11 @@
       <div class="hero__flood" aria-hidden="true"></div>
       <div class="hero__grain" aria-hidden="true"></div>
       <div class="hero__copy">
-        <p class="label"><span data-drop-label></span> · Pre-order open</p>
+        <p class="label"><span data-season></span> · Pre-order open</p>
         <h1 id="hero-title" class="display">Wear<br>something<br><span class="outline">loud.</span></h1>
         <p class="lede">Wild all-over-print impact vests for wakesurfing. Reserve yours free. Each print only gets made if <span data-unlock></span> riders want it.</p>
         <div class="hero__cta">
-          <a class="btn btn--blue" href="#drop">Reserve a vest</a>
+          <a class="btn btn--blue" href="#vests">Reserve a vest</a>
           <a class="btn btn--white" href="#how">How pre-orders work</a>
         </div>
         <p class="fine"><span data-price></span> pre-order · No card needed · Not a Coast Guard approved life jacket</p>
@@ -62,15 +62,15 @@
     <!-- PRINT STRIP -->
     <div class="strip" aria-hidden="true"></div>
 
-    <!-- DROP -->
-    <section class="section" id="drop" aria-labelledby="drop-title">
+    <!-- VESTS -->
+    <section class="section" id="vests" aria-labelledby="vests-title">
       <div class="section__head">
-        <p class="label"><span data-drop-label></span> · <span data-season></span></p>
-        <h2 id="drop-title" class="h2">Four prints.<br>You pick which get made.</h2>
+        <p class="label">Pre-order · <span data-season></span></p>
+        <h2 id="vests-title" class="h2">Every print.<br>You pick which get made.</h2>
         <p class="sub">Tap a vest to see the front, back and print up close, then reserve your size.</p>
       </div>
       <div class="grid" id="grid"><!-- cards from script --></div>
-      <p class="mock-note">Vest images are design renders. Real photos come with the first sewn samples.</p>
+      <p class="mock-note">Vest images are digital previews of each print. Real photos come with the first sewn samples.</p>
     </section>
 
     <!-- HOW -->
@@ -145,7 +145,7 @@
         </details>
         <details>
           <summary><span>Can I design my own print?</span></summary>
-          <p>Not yet. Custom one-off vests are on the list. Join the drop list below and you'll hear first.</p>
+          <p>Not yet. Custom one-off vests are on the list. Join the email list below and you'll hear first.</p>
         </details>
         <details>
           <summary><span>Will the print fade?</span></summary>
@@ -154,14 +154,14 @@
       </div>
     </section>
 
-    <!-- DROP LIST -->
+    <!-- EMAIL LIST -->
     <section class="signup" aria-labelledby="list-title">
       <div class="signup__inner">
         <img class="signup__mark" src="brand/mark.svg" alt="" width="54" height="100">
-        <h2 id="list-title" class="h2">Get the next drop first.</h2>
+        <h2 id="list-title" class="h2">Get new prints first.</h2>
         <p class="sub">New prints, unlock news and early access. A few emails a season, nothing else.</p>
         <form class="signup__form" id="listForm" novalidate>
-          <input type="hidden" name="form" value="drop-list">
+          <input type="hidden" name="form" value="email-list">
           <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
           <label class="sr" for="listEmail">Email</label>
           <input id="listEmail" name="email" type="email" required placeholder="you@email.com" autocomplete="email">
@@ -176,7 +176,7 @@
     <div class="footer__top">
       <img src="brand/logo-stacked.svg" alt="" width="160" height="160" class="footer__logo">
       <nav aria-label="Footer">
-        <a href="#drop">Drop 01</a>
+        <a href="#vests">Vests</a>
         <a href="#how">How it works</a>
         <a href="#faq">FAQ</a>
         <button class="link" type="button" data-open-size>Size guide</button>
@@ -254,6 +254,6 @@
     <p class="fine">Provisional chart. The final one comes with the production samples, and you can change your size until you pay.</p>
   </dialog>
 
-  <script src="app.js?v=3"></script>
+  <script src="app.js?v=4"></script>
 </body>
 </html>
