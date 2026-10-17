@@ -148,6 +148,7 @@ p { margin: 0; }
 .hero__stage { position: relative; display: flex; flex-direction: column; align-items: center; }
 .hero__vest { width: min(100%, 520px); aspect-ratio: 1100 / 1268; position: relative; }
 .hero__vest img {
+  position: absolute; inset: 0; /* fixed box: renders and taller photo fronts swap without moving the page */
   width: 100%; height: 100%; object-fit: contain;
   filter: drop-shadow(0 40px 60px rgba(0,0,0,.6));
   animation: bob 6s ease-in-out infinite;
@@ -209,12 +210,13 @@ p { margin: 0; }
 }
 .card__vest { display: grid; place-items: center; padding: 40px 40px 0; }
 .card__vest img {
-  width: min(78%, 380px); height: auto;
+  grid-area: 1 / 1; /* front and back share one fixed box, sized for the tallest (photo) fronts */
+  width: min(78%, 380px); height: auto; aspect-ratio: 1100 / 1725; object-fit: contain;
   filter: drop-shadow(0 30px 40px rgba(0,0,0,.65));
   transition: transform .5s var(--ease);
 }
 .card__vest .card__back {
-  position: absolute; opacity: 0; transform: translateY(10px) scale(.97);
+  opacity: 0; transform: translateY(10px) scale(.97);
   transition: opacity .3s ease, transform .5s var(--ease);
 }
 .card__body { padding: 0 28px 28px; display: flex; align-items: end; justify-content: space-between; gap: 16px; }
@@ -335,8 +337,8 @@ input::placeholder { color: #6b7179; }
 .modal--narrow .modal__close { margin: -16px -16px 0 0; }
 .pd { display: grid; grid-template-columns: 1.1fr 1fr; }
 .pd__gallery { padding: 24px; background: #17191d; }
-.pd__main { aspect-ratio: 1; border-radius: 12px; overflow: hidden; display: grid; place-items: center; background: radial-gradient(circle at 50% 45%, #2f3238, #17191d 70%); }
-.pd__main img { width: 100%; height: 100%; object-fit: contain; }
+.pd__main { position: relative; aspect-ratio: 1; border-radius: 12px; overflow: hidden; background: radial-gradient(circle at 50% 45%, #2f3238, #17191d 70%); }
+.pd__main img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
 .pd__main img.cover { object-fit: cover; }
 .pd__thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 12px; }
 .thumb { aspect-ratio: 1; padding: 0; border-radius: 8px; overflow: hidden; border: 2px solid transparent; background: #22252a; cursor: pointer; }
