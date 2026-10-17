@@ -63,5 +63,43 @@ window.SITE = {
       blurb: "Black sprinkle confetti on bright white with big red, cobalt, yellow, teal, lime and hot-pink shapes, each one dropping a hard black shadow. Pure Saturday-morning 1988.",
       glow: "#2547D0",
     },
+
+    // Jet Set '94: four mid-90s jet ski liveries, shown together under one heading
+    {
+      id: "hotbolt",
+      img: "hot-bolt",
+      collection: "Jet Set '94",
+      name: "Hot Bolt",
+      kicker: "Purple hood, pink hull, lightning",
+      blurb: "A purple hood, a hot-pink hull band and yellow-to-orange lightning bolts with electric-blue shadows, all on white. Straight off a trailer at the '94 boat ramp.",
+      glow: "#FFB000",
+    },
+    {
+      id: "tigerfade",
+      img: "tiger-fade",
+      collection: "Jet Set '94",
+      name: "Tiger Fade",
+      kicker: "Pink-to-purple fade, tiger stripes",
+      blurb: "Hot pink melting into deep purple, with tiger stripes clawing in from both sides. Plum stripes up top, neon pink down low.",
+      glow: "#E040C0",
+    },
+    {
+      id: "lemonsplash",
+      img: "lemon-splash",
+      collection: "Jet Set '94",
+      name: "Lemon Splash",
+      kicker: "Yellow hull, dry-brush splash",
+      blurb: "Bright lemon yellow ripped through with hot-pink and red dry-brush streaks and paint spatter, over a black rub-rail hem.",
+      glow: "#FFD400",
+    },
+    {
+      id: "mintwake",
+      img: "mint-wake",
+      collection: "Jet Set '94",
+      name: "Mint Wake",
+      kicker: "White, purple, teal and mint",
+      blurb: "Clean white with a purple hull and shoulders, torn teal and mint stripes and a spray of shards coming off the tips.",
+      glow: "#3FD9A0",
+    },
   ],
 };

@@ -62,6 +62,13 @@
   // Product cards
   const grid = $("#grid");
   S.designs.forEach((d, i) => {
+    // Designs that share a collection get one heading above the first of them
+    if (d.collection && (i === 0 || S.designs[i - 1].collection !== d.collection)) {
+      const h = document.createElement("h3");
+      h.className = "grid__collection reveal";
+      h.textContent = d.collection;
+      grid.appendChild(h);
+    }
     const card = document.createElement("button");
     card.type = "button";
     card.className = "card reveal";
