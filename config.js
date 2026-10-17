@@ -2,7 +2,7 @@
 // The logo artwork is in /brand (swap those SVG/PNG files if the name changes).
 window.SITE = {
   // Bump this whenever you replace a vest image (same filename) so browsers fetch the new one
-  imgVersion: 6,
+  imgVersion: 7,
 
   brand: {
     name: "Stinger",
@@ -120,6 +120,16 @@ window.SITE = {
       kicker: "Miami pastel speed streaks",
       blurb: "Bubblegum pink and sky blue speed streaks with black keylines tearing across bright white, shattering into shards over pastel palms. A hot-pink lining finishes it off.",
       glow: "#F55BAA",
+      noBack: true, // no back photo yet: hide the back view
+    },
+
+    {
+      id: "antelope92",
+      img: "antelope",
+      name: "Antelope '92",
+      kicker: "Fawn hide, spine to sides",
+      blurb: "A warm tan hide with a dark stripe running down the spine and soft white spots fanning out in chevrons toward the sides. Cream lining, black zipper. Wild without shouting.",
+      glow: "#B08A66",
       noBack: true, // no back photo yet: hide the back view
     },
 
