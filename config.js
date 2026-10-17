@@ -78,10 +78,41 @@ window.SITE = {
     {
       id: "jetset94",
       img: "jetset94",
+      collection: "Jet Set '94",
       name: "Jet Set '94",
       kicker: "90s jet ski colorblock",
       blurb: "A teal-and-mint lightning bolt splits purple tiger stripes from halftone hot pink, with sun-yellow dry-brush splash and shards flying off every kink. Straight off a '94 trailer.",
       glow: "#2BD9C6",
+      noBack: true, // no back photo yet: hide the back view
+    },
+    {
+      id: "tigerfade",
+      img: "tigerfade",
+      collection: "Jet Set '94",
+      name: "Tiger Fade",
+      kicker: "Hot pink to purple, tiger striped",
+      blurb: "A hot-pink-to-purple fade clawed with plum tiger stripes, each one rimmed in neon pink, over a sun-yellow pinstripe. Loud from the dock, louder up close.",
+      glow: "#E040C0",
+      noBack: true, // no back photo yet: hide the back view
+    },
+    {
+      id: "splashzone",
+      img: "splashzone",
+      collection: "Jet Set '94",
+      name: "Splash Zone",
+      kicker: "Paint splats on lemon yellow",
+      blurb: "Lemon yellow hit with hot-pink, teal and purple paint splats, drips and dry-brush streaks, plus black speed slashes. Looks like it went through the spray at full throttle.",
+      glow: "#FFD400",
+      noBack: true, // no back photo yet: hide the back view
+    },
+    {
+      id: "shardburst",
+      img: "shardburst",
+      collection: "Jet Set '94",
+      name: "Shard Burst",
+      kicker: "Exploding shards on white",
+      blurb: "A burst of teal, mint, pink, purple and sun-yellow shards blasting off the chest, with halftone rings, speed lines and a purple hull and yoke.",
+      glow: "#3FD9A0",
       noBack: true, // no back photo yet: hide the back view
     },
   ],
