@@ -48,12 +48,12 @@ window.SITE = {
       glow: "#3A5BD9",
     },
     {
-      id: "recess",
-      img: "dixie",
-      name: "Recess",
-      kicker: "90s squiggles",
-      blurb: "Teal brush strokes, hot-pink zigzags and little black scribbles on bone white. Pure 1993, in neoprene.",
-      glow: "#E0457B",
+      id: "oceandrive85",
+      img: "miami",
+      name: "Ocean Drive '85",
+      kicker: "80s Miami neon",
+      blurb: "A striped sunset over a hot-pink horizon grid, teal neon palms and a glowing flamingo, all on midnight purple. Pastel suit not included.",
+      glow: "#FF2E97",
     },
   ],
 };
