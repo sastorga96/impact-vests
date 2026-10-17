@@ -6,7 +6,7 @@
   const price = "$" + S.drop.price;
   // A design with colour options is shown in one colour at a time: v = design with that colour's img/glow
   const variant = (d, ci) => (d.colors ? { ...d, img: d.colors[ci].img, glow: d.colors[ci].glow || d.glow, color: d.colors[ci].name } : d);
-  const img = (d, view) => `img/${d.img}-${view}.${view === "front" || view === "back" ? "webp" : "jpg"}`;
+  const img = (d, view) => `img/${d.img}-${view}.${view === "front" || view === "back" ? "webp" : "jpg"}?v=${S.imgVersion || 1}`;
 
   // Text that comes from config
   const fill = (attr, value) => $$(`[${attr}]`).forEach((el) => (el.textContent = value));
