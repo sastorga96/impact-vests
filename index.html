@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Impact Vests · Drop 01 Pre-Orders</title>
+  <meta name="description" content="Loud all-over-print wakesurf impact vests. Reserve one free; each print only gets made if enough riders want it.">
+  <meta property="og:title" content="Loud impact vests · Drop 01 pre-orders">
+  <meta property="og:description" content="Four wild prints. Reserve free, pay only if your print gets made.">
+  <meta property="og:image" content="brand/og.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0B0C0E">
+  <link rel="icon" href="brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="brand/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+</head>
+<body>
+  <a class="skip" href="#drop">Skip to the vests</a>
+
+  <header class="nav" id="top">
+    <a class="nav__logo" href="#top" aria-label="Home"><img src="brand/logo-header.svg" alt="" width="139" height="48"></a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#drop">Drop 01</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn--blue btn--sm" href="#drop">Reserve</a>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__flood" aria-hidden="true"></div>
+      <div class="hero__grain" aria-hidden="true"></div>
+      <div class="hero__copy">
+        <p class="label"><span data-drop-label></span> · Pre-order open</p>
+        <h1 id="hero-title" class="display">Wear<br>something<br><span class="outline">loud.</span></h1>
+        <p class="lede">Wild all-over-print impact vests for wakesurfing. Reserve yours free. Each print only gets made if <span data-unlock></span> riders want it.</p>
+        <div class="hero__cta">
+          <a class="btn btn--blue" href="#drop">Reserve a vest</a>
+          <a class="btn btn--white" href="#how">How pre-orders work</a>
+        </div>
+        <p class="fine"><span data-price></span> pre-order · No card needed · Not a Coast Guard approved life jacket</p>
+      </div>
+      <div class="hero__stage">
+        <div class="hero__vest">
+          <img id="heroVest" src="img/waverace-front.webp" alt="" width="1100" height="1268">
+        </div>
+        <div class="hero__picker" role="group" aria-label="Preview a print">
+          <!-- filled by script -->
+        </div>
+        <p class="hero__name"><span id="heroName">Race '97</span> <span class="hero__kicker" id="heroKicker">90s race livery</span></p>
+      </div>
+    </section>
+
+    <!-- PRINT STRIP -->
+    <div class="strip" aria-hidden="true"></div>
+
+    <!-- DROP -->
+    <section class="section" id="drop" aria-labelledby="drop-title">
+      <div class="section__head">
+        <p class="label"><span data-drop-label></span> · <span data-season></span></p>
+        <h2 id="drop-title" class="h2">Four prints.<br>You pick which get made.</h2>
+        <p class="sub">Tap a vest to see the front, back and print up close, then reserve your size.</p>
+      </div>
+      <div class="grid" id="grid"><!-- cards from script --></div>
+      <p class="mock-note">Vest images are design renders. Real photos come with the first sewn samples.</p>
+    </section>
+
+    <!-- HOW -->
+    <section class="section section--alt" id="how" aria-labelledby="how-title">
+      <div class="section__head">
+        <p class="label">How pre-orders work</p>
+        <h2 id="how-title" class="h2">No warehouse.<br>No leftovers.</h2>
+      </div>
+      <ol class="steps">
+        <li>
+          <span class="steps__num">01</span>
+          <h3>Reserve free</h3>
+          <p>Pick a print and your size. No card, no charge. You can cancel any time before production.</p>
+        </li>
+        <li>
+          <span class="steps__num">02</span>
+          <h3>The print hits <span data-unlock></span></h3>
+          <p>Every print needs <span data-unlock></span> reservations to go into production. The ones that don't make it simply aren't made.</p>
+        </li>
+        <li>
+          <span class="steps__num">03</span>
+          <h3>Pay, then we make it</h3>
+          <p>When your print unlocks we email you a secure payment link at <span data-price></span> with shipping and timing. Nothing is made or charged until you say go.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- BUILD -->
+    <section class="section build" aria-labelledby="build-title">
+      <div class="build__img">
+        <img src="brand/badge.webp" alt="Moulded black silicone back-neck badge with a raised gray ray and white wordmark" width="600" height="1192" loading="lazy">
+      </div>
+      <div>
+        <p class="label">The vest</p>
+        <h2 id="build-title" class="h2">Loud outside.<br>Serious underneath.</h2>
+        <ul class="specs">
+          <li><strong>Printed before it's sewn.</strong> The print goes on the flat panels first, so it runs edge to edge instead of sitting on top like a sticker.</li>
+          <li><strong>Front-zip neoprene impact vest.</strong> Flex-cut foam panels for wakesurf, built for movement more than bulk.</li>
+          <li><strong>Moulded back-neck badge.</strong> Matte black silicone with a raised ray. The only quiet thing on it.</li>
+          <li><strong>Adult sizes S to XXL.</strong> <button class="link" type="button" data-open-size>See the size guide</button></li>
+        </ul>
+        <p class="warn" role="note"><strong>Not a US Coast Guard approved life jacket.</strong> This is an impact vest for wakesurfing where approved flotation isn't required. Keep a Coast Guard approved life jacket aboard for every rider.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--alt" id="faq" aria-labelledby="faq-title">
+      <div class="section__head">
+        <p class="label">FAQ</p>
+        <h2 id="faq-title" class="h2">Straight answers.</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary><span>Is this a life jacket?</span></summary>
+          <p>No. It's an impact vest and it is <strong>not a US Coast Guard approved life jacket</strong>. It adds some flotation and protection for wakesurfing, but it does not meet Coast Guard requirements. Most states require an approved life jacket for waterskiing, wakeboarding, tubing and riding a personal watercraft, and every boat needs one approved life jacket per person aboard. Check your state's rules before you ride.</p>
+        </details>
+        <details>
+          <summary><span>Do I pay anything now?</span></summary>
+          <p>No. A reservation is free and needs no card. If your print unlocks, we email you a payment link at the <span data-price></span> pre-order price. You decide then.</p>
+        </details>
+        <details>
+          <summary><span>What if my print doesn't hit <span data-unlock></span>?</span></summary>
+          <p>Then it isn't made and your reservation is cancelled. You're never charged. We'll tell you which prints made it and you can switch to one of those.</p>
+        </details>
+        <details>
+          <summary><span>When does it ship, and where?</span></summary>
+          <p>US addresses only for now. Exact shipping cost and delivery timing are in the payment email, before you pay. Each vest is made to order, so expect a few weeks, not a few days.</p>
+        </details>
+        <details>
+          <summary><span>How does sizing work?</span></summary>
+          <p>Adult S to XXL, sized by chest. <button class="link" type="button" data-open-size>Open the size guide</button>. The final chart comes with the production samples, and you can change your size up until you pay.</p>
+        </details>
+        <details>
+          <summary><span>Can I design my own print?</span></summary>
+          <p>Not yet. Custom one-off vests are on the list. Join the drop list below and you'll hear first.</p>
+        </details>
+        <details>
+          <summary><span>Will the print fade?</span></summary>
+          <p>The print is dyed into the fabric rather than sitting on top, so it won't crack or peel. Rinse with fresh water and dry it out of direct sun to keep the colours bright longer.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- DROP LIST -->
+    <section class="signup" aria-labelledby="list-title">
+      <div class="signup__inner">
+        <img class="signup__mark" src="brand/mark.svg" alt="" width="54" height="100">
+        <h2 id="list-title" class="h2">Get the next drop first.</h2>
+        <p class="sub">New prints, unlock news and early access. A few emails a season, nothing else.</p>
+        <form class="signup__form" id="listForm" novalidate>
+          <input type="hidden" name="form" value="drop-list">
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label class="sr" for="listEmail">Email</label>
+          <input id="listEmail" name="email" type="email" required placeholder="you@email.com" autocomplete="email">
+          <button class="btn btn--blue" type="submit">Join the list</button>
+        </form>
+        <p class="form-msg" id="listMsg" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <img src="brand/logo-stacked.svg" alt="" width="160" height="160" class="footer__logo">
+      <nav aria-label="Footer">
+        <a href="#drop">Drop 01</a>
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+        <button class="link" type="button" data-open-size>Size guide</button>
+        <a href="" data-contact hidden>Contact</a>
+      </nav>
+    </div>
+    <p class="footer__legal">All <span data-brand></span> vests are impact vests and are <strong>not US Coast Guard approved life jackets</strong>. Not for children, towed water sports where approved flotation is required, or personal watercraft. Pre-orders are reservations, not purchases.</p>
+    <p class="footer__copy">© <span data-year></span> <span data-brand></span> <span data-tagline></span></p>
+  </footer>
+
+  <!-- PRODUCT DIALOG -->
+  <dialog class="modal" id="product" aria-labelledby="pTitle">
+    <button class="modal__close" type="button" data-close aria-label="Close">×</button>
+    <div class="pd">
+      <div class="pd__gallery">
+        <div class="pd__main"><img id="pMain" src="" alt=""></div>
+        <div class="pd__thumbs" id="pThumbs" role="group" aria-label="Views"></div>
+      </div>
+      <div class="pd__info">
+        <p class="label" id="pKicker"></p>
+        <h2 class="pd__title" id="pTitle"></h2>
+        <p class="pd__price"><span data-price></span> <span class="pd__pre">pre-order price</span></p>
+        <p class="pd__blurb" id="pBlurb"></p>
+        <p class="warn warn--sm"><strong>Not a US Coast Guard approved life jacket.</strong> Impact vest for wakesurfing.</p>
+
+        <form id="reserveForm" class="pd__form" novalidate>
+          <input type="hidden" name="form" value="reservation">
+          <input type="hidden" name="design" id="fDesign">
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <fieldset class="sizes">
+            <legend>Size <button class="link link--sm" type="button" data-open-size>Size guide</button></legend>
+            <div class="sizes__row" id="sizeRow"></div>
+          </fieldset>
+          <div class="row2">
+            <label>Quantity
+              <select name="quantity" id="fQty">
+                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+              </select>
+            </label>
+            <label>Name
+              <input name="name" required autocomplete="name">
+            </label>
+          </div>
+          <label>Email
+            <input name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+          </label>
+          <label class="check">
+            <input type="checkbox" name="acknowledged" value="yes" required>
+            <span>I understand this is a free reservation, not a purchase, and that this vest is <strong>not a US Coast Guard approved life jacket</strong>.</span>
+          </label>
+          <button class="btn btn--blue btn--full" type="submit">Reserve my vest</button>
+          <p class="fine">No card. We email you only if your print unlocks.</p>
+          <p class="form-msg" id="reserveMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- SIZE DIALOG -->
+  <dialog class="modal modal--narrow" id="sizes" aria-labelledby="sTitle">
+    <button class="modal__close" type="button" data-close aria-label="Close">×</button>
+    <h2 class="pd__title" id="sTitle">Size guide</h2>
+    <p class="sub">Measure around the fullest part of your chest. Between sizes? Size up for layering, down for a tighter fit.</p>
+    <table class="table">
+      <thead><tr><th scope="col">Size</th><th scope="col">Chest (in)</th><th scope="col">Chest (cm)</th></tr></thead>
+      <tbody>
+        <tr><td>S</td><td>32–36</td><td>81–91</td></tr>
+        <tr><td>M</td><td>36–40</td><td>91–102</td></tr>
+        <tr><td>L</td><td>40–44</td><td>102–112</td></tr>
+        <tr><td>XL</td><td>44–48</td><td>112–122</td></tr>
+        <tr><td>XXL</td><td>48–52</td><td>122–132</td></tr>
+      </tbody>
+    </table>
+    <p class="fine">Provisional chart. The final one comes with the production samples, and you can change your size until you pay.</p>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
