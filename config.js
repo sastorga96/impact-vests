@@ -38,6 +38,7 @@ window.SITE = {
       kicker: "Big cat, edge to edge",
       blurb: "Classic big-cat rosettes in mustard yellow, wrapped around the whole vest from zipper to side seams. Quiet it is not.",
       glow: "#EAC224",
+      noBack: true, // no back photo yet: hide the back view
     },
     {
       id: "usa96",

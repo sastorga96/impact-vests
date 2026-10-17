@@ -71,7 +71,7 @@
     }
     const card = document.createElement("button");
     card.type = "button";
-    card.className = "card reveal";
+    card.className = d.noBack ? "card card--noback reveal" : "card reveal";
     card.style.setProperty("--glow", d.glow);
     card.setAttribute("aria-label", `${d.name}, ${price} pre-order. View and reserve`);
     card.innerHTML = `
@@ -79,7 +79,7 @@
       <span class="card__tag">${String(i + 1).padStart(2, "0")} / ${String(S.designs.length).padStart(2, "0")}</span>
       <div class="card__vest">
         <img class="card__front" src="${img(d, "front")}" alt="" loading="lazy" width="1100" height="1268">
-        <img class="card__back" src="${img(d, "back")}" alt="" loading="lazy" width="1100" height="1295">
+        ${d.noBack ? "" : `<img class="card__back" src="${img(d, "back")}" alt="" loading="lazy" width="1100" height="1295">`}
       </div>
       <div class="card__body">
         <div>
@@ -136,7 +136,7 @@
     $("#fDesign").value = d.name;
     const thumbs = $("#pThumbs");
     thumbs.innerHTML = "";
-    views.forEach((v) => {
+    views.filter((v) => !(d.noBack && v.key === "back")).forEach((v) => {
       const t = document.createElement("button");
       t.type = "button";
       t.className = "thumb";

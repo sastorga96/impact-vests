@@ -236,6 +236,7 @@ p { margin: 0; }
 @media (hover: hover) {
   .card:hover .card__front { opacity: 0; transform: translateY(-6px) scale(.97); }
   .card:hover .card__back { opacity: 1; transform: none; }
+  .card--noback:hover .card__front { opacity: 1; transform: none; }
 }
 .card__front { transition: opacity .3s ease, transform .5s var(--ease); }
 .card__tag {
