@@ -74,7 +74,7 @@ def place_logo(a, args):
         bgc = np.median(a[max(0, y0):y0 + lh, max(0, x0):x0 + lw].reshape(-1, 3), 0)
         fg = (np.abs(a - bgc).sum(2) > 90).astype(np.uint8)
         n, lab, st, _ = cv2.connectedComponentsWithStats(fg, 8)
-        pad = lw // 8
+        pad = int(lw * args.logo_clear_pad)
         for i in range(1, n):
             bx, by, bw, bh, area = st[i]
             if area < (lw * 0.25) ** 2 and bx < x0 + lw + pad and bx + bw > x0 - pad and by < y0 + lh + pad and by + bh > y0 - pad:
@@ -99,6 +99,7 @@ def main():
     ap.add_argument('--logo-xy', type=float, nargs=2, default=(0.73, 0.37), help="logo centre as fraction of vest box (default wearer's left chest)")
     ap.add_argument('--logo-w', type=float, default=0.30, help='logo width as fraction of vest width')
     ap.add_argument('--logo-clear', action='store_true', help='remove small print shapes touching the logo')
+    ap.add_argument('--logo-clear-pad', type=float, default=0.125, help='how far round the logo --logo-clear reaches, as a fraction of logo width (0 = only shapes under the logo)')
     ap.add_argument('--lining', default=None, help="recolour the inner lining: 'black' or a hex colour like '#ff1493' (default: keep the photo's red)")
     ap.add_argument('--base', default='f2401-front', choices=list(BASES), help='base photo')
     ap.add_argument('--out', default=None, help='output folder (default /mnt/project-files/images/<slug>-vest/photo-mockup)')
