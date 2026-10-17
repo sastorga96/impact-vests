@@ -36,8 +36,8 @@ window.SITE = {
       img: "cheetah",
       name: "Cheetah",
       kicker: "Big cat, edge to edge",
-      blurb: "Classic big-cat rosettes in sun yellow, wrapped around the whole vest from zipper to side seams. Quiet it is not.",
-      glow: "#FFD60A",
+      blurb: "Classic big-cat rosettes in mustard yellow, wrapped around the whole vest from zipper to side seams. Quiet it is not.",
+      glow: "#EAC224",
     },
     {
       id: "usa96",
