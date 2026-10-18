@@ -123,16 +123,6 @@ window.SITE = {
       noBack: true, // no back photo yet: hide the back view
     },
 
-    {
-      id: "antelope92",
-      img: "antelope",
-      name: "Antelope '92",
-      kicker: "Fawn hide, spine to sides",
-      blurb: "A warm tan hide with a dark stripe running down the spine and soft white spots fanning out in chevrons toward the sides. Cream lining, black zipper. Wild without shouting.",
-      glow: "#B08A66",
-      noBack: true, // no back photo yet: hide the back view
-    },
-
     // Off the site until it has a photo-mapped front (images stay in img/miami-*):
     // {
     //   id: "oceandrive85",
@@ -141,6 +131,17 @@ window.SITE = {
     //   kicker: "80s Miami neon",
     //   blurb: "A striped sunset over a hot-pink horizon grid, teal neon palms and a glowing flamingo, all on midnight purple. Pastel suit not included.",
     //   glow: "#FF2E97",
+    // },
+
+    // Off the site at Spencer's request (10-18); images stay in img/antelope-*:
+    // {
+    //   id: "antelope92",
+    //   img: "antelope",
+    //   name: "Antelope '92",
+    //   kicker: "Fawn hide, spine to sides",
+    //   blurb: "A warm tan hide with a dark stripe running down the spine and soft white spots fanning out in chevrons toward the sides. Cream lining, black zipper. Wild without shouting.",
+    //   glow: "#B08A66",
+    //   noBack: true, // no back photo yet: hide the back view
     // },
   ],
 };
