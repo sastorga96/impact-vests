@@ -94,24 +94,25 @@ window.SITE = {
       glow: "#E040C0",
       noBack: true, // no back photo yet: hide the back view
     },
-    {
-      id: "splashzone",
-      img: "splashzone",
-      name: "Splash Zone",
-      kicker: "Paint splats on lemon yellow",
-      blurb: "Lemon yellow hit with hot-pink, teal and purple paint splats, drips and dry-brush streaks, plus black speed slashes. Looks like it went through the spray at full throttle.",
-      glow: "#FFD400",
-      noBack: true, // no back photo yet: hide the back view
-    },
-    {
-      id: "shardburst",
-      img: "shardburst",
-      name: "Shard Burst",
-      kicker: "Exploding shards on white",
-      blurb: "A burst of teal, mint, pink, purple and sun-yellow shards blasting off the chest, with halftone rings, speed lines and a purple hull and yoke.",
-      glow: "#3FD9A0",
-      noBack: true, // no back photo yet: hide the back view
-    },
+    // Off the site at Spencer's request (10-18); images stay in img/splashzone-* and img/shardburst-*:
+    // {
+    //   id: "splashzone",
+    //   img: "splashzone",
+    //   name: "Splash Zone",
+    //   kicker: "Paint splats on lemon yellow",
+    //   blurb: "Lemon yellow hit with hot-pink, teal and purple paint splats, drips and dry-brush streaks, plus black speed slashes. Looks like it went through the spray at full throttle.",
+    //   glow: "#FFD400",
+    //   noBack: true, // no back photo yet: hide the back view
+    // },
+    // {
+    //   id: "shardburst",
+    //   img: "shardburst",
+    //   name: "Shard Burst",
+    //   kicker: "Exploding shards on white",
+    //   blurb: "A burst of teal, mint, pink, purple and sun-yellow shards blasting off the chest, with halftone rings, speed lines and a purple hull and yoke.",
+    //   glow: "#3FD9A0",
+    //   noBack: true, // no back photo yet: hide the back view
+    // },
 
     {
       id: "southbeach89",
