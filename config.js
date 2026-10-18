@@ -2,7 +2,7 @@
 // The logo artwork is in /brand (swap those SVG/PNG files if the name changes).
 window.SITE = {
   // Bump this whenever you replace a vest image (same filename) so browsers fetch the new one
-  imgVersion: 8,
+  imgVersion: 9,
 
   brand: {
     name: "Stinger",
