@@ -2,7 +2,7 @@
 // The logo artwork is in /brand (swap those SVG/PNG files if the name changes).
 window.SITE = {
   // Bump this whenever you replace a vest image (same filename) so browsers fetch the new one
-  imgVersion: 15,
+  imgVersion: 16,
 
   brand: {
     name: "Stinger",
@@ -136,9 +136,9 @@ window.SITE = {
       id: "redline88",
       img: "redline",
       name: "Redline '88",
-      kicker: "Bright red flames",
-      blurb: "A wall of red fire climbing from the hem: deep crimson edges, bright red tongues and white-hot cores, with ghost flames and embers rising into black. Red lining.",
-      glow: "#FF1020",
+      kicker: "Red and orange fire",
+      blurb: "Deep red and orange flames with gold-white cores, climbing highest up the sides and fading into dark smoke and sparks across the chest. Orange lining.",
+      glow: "#FF5A14",
       noBack: true, // no back photo yet: hide the back view
     },
     {
