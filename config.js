@@ -2,7 +2,7 @@
 // The logo artwork is in /brand (swap those SVG/PNG files if the name changes).
 window.SITE = {
   // Bump this whenever you replace a vest image (same filename) so browsers fetch the new one
-  imgVersion: 13,
+  imgVersion: 14,
 
   brand: {
     name: "Stinger",
@@ -136,8 +136,8 @@ window.SITE = {
       id: "redline88",
       img: "redline",
       name: "Redline '88",
-      kicker: "Red neon hot-rod flames",
-      blurb: "Hot-rod flames traced in glowing red neon tube with an amber pinstripe, rising off a red fire bed into black carbon weave, with ghost flames and embers behind. Red lining.",
+      kicker: "Bright red flames",
+      blurb: "A wall of red fire climbing from the hem: deep crimson edges, bright red tongues and white-hot cores, with ghost flames and embers rising into black. Red lining.",
       glow: "#FF1020",
       noBack: true, // no back photo yet: hide the back view
     },
@@ -145,8 +145,8 @@ window.SITE = {
       id: "blueflame88",
       img: "blueflame",
       name: "Blue Flame '88",
-      kicker: "Blue neon hot-rod flames",
-      blurb: "The Redline flames turned gas-burner blue: electric blue neon tube with a cyan pinstripe, licking up the other way off a deep blue fire bed. Blue lining.",
+      kicker: "Icy blue flames",
+      blurb: "The Redline fire burning blue: deep cerulean edges, sky-blue tongues and icy white cores, licking up the other way over a dark teal-navy ground. Blue lining.",
       glow: "#1E6BFF",
       noBack: true, // no back photo yet: hide the back view
     },
